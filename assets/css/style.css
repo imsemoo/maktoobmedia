@@ -1,0 +1,1059 @@
+/* ---------------------------------------------------------------------
+   Maktoob — Core Design Tokens & Global Utilities
+   author:   Islam Nasser
+   Version:  1.0  •  28‑Apr‑2025
+   ---------------------------------------------------------------------
+   ✦ HOW TO USE
+   1.  Import _after_ any framework (e.g. Bootstrap) so these variables can
+       override its defaults.
+   2.  Reference in components with:  var(--color‑name)
+   3.  Extend or modify the palette as the brand evolves.
+   --------------------------------------------------------------------- */
+
+/***** 1. ROOT COLOR TOKENS *************************************************/
+:root {
+  /* === Brand (Red) ======================================================= */
+  --color-primary: #EE2937;
+  /* base */
+  --color-primary-light: #F65A66;
+  /* tint  @+10% */
+  --color-primary-dark: #C9202D;
+  /* shade @‑15% */
+  --background-color-primary: hsl(356 85% 96% / 1);
+
+  --color-primary-border: hsl(356 85% 90% / 1);
+  /* === Secondary / Accent (Blue) ======================================== */
+  --color-secondary: #019ECF;
+  --color-secondary-hover: #0179A0;
+
+
+  /* === Neutral Greys ===================================================== */
+  --color-white: #FFFFFF;
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F2F2F2;
+  /* cards */
+  --color-gray-200: #E5E7EB;
+  /* borders */
+  --color-gray-300: #D1D5DB;
+  /* strokes */
+  --color-muted: #6C7A99;
+  /* secondary text */
+  --color-dark: #000000;
+  /* primary text */
+
+  /* === Semantic States =================================================== */
+  --color-success: #28C76F;
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B;
+  --color-info: #06B6D4;
+}
+
+/***** 2. GLOBAL RESET ******************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/***** 3. TYPOGRAPHY ********************************************************/
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url(../fonts/en/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  src: url(../fonts/en/Open_Sans/OpenSans-SemiBold.ttf);
+
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url(../fonts/en/Open_Sans/OpenSans-Bold.ttf);
+
+}
+
+@font-face {
+  font-family: "CrimsonText-Regular";
+  src: url(../fonts/en/Crimson_Text/CrimsonText-Regular.ttf);
+}
+
+@font-face {
+  font-family: "CrimsonText-SemiBold";
+  src: url(../fonts/en/Crimson_Text/CrimsonText-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "CrimsonText-Bold";
+  src: url(../fonts/en/Crimson_Text/CrimsonText-Bold.ttf);
+}
+
+
+
+body {
+  font-family: "OpenSans-Regular";
+  color: var(--color-dark);
+  line-height: 1.5;
+  background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "CrimsonText-Bold";
+
+  margin: 0;
+  line-height: 1.3;
+  color: var(--color-dark);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin: 0;
+
+}
+
+/***** 4. UTILITIES *********************************************************/
+.text-muted {
+  color: var(--color-muted) !important;
+}
+
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***** 5. BUTTONS ***********************************************************/
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .5rem 1.25rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Primary */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  transition: background-color .3s ease, border-color .3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+/* Secondary */
+.btn-secondary {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+  transition: background-color .3s ease, border-color .3s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--color-secondary-hover);
+  border-color: var(--color-secondary-hover);
+}
+
+.btn-outline-secondary {
+  background-color: rgba(235, 242, 255, .37);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  transition: background-color .3s ease, border-color .3s ease;
+}
+
+/***** 6. OVERLAYS **********************************************************/
+.col-middle .overlay {
+  background: rgba(0, 0, 0, .6);
+  color: var(--color-white);
+  height: max-content;
+}
+
+/***** 7. LIST & IMAGE RESET ***********************************************/
+ul {
+  list-style: none;
+}
+
+/* END OF FILE */
+/* =====================  Header / Navbar  ===================== */
+.site-header {
+  border-bottom: 1px solid var(--color-gray-200);
+  background: var(--color-white);
+  position: relative;
+  z-index: 100;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+/* ---------- Brand ---------- */
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+
+.brand__mark {
+  width: 180px;
+  object-fit: contain;
+}
+
+/* ---------- Menu Toggle (Mobile) ---------- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--color-dark);
+  flex: 0 0 auto;
+}
+
+/* ---------- Main Nav ---------- */
+.primary-nav {
+  flex: 0 1 auto;
+}
+
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-nav a {
+  display: inline-block;
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: color 0.2s ease;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus {
+  color: var(--color-primary);
+}
+
+.primary-nav .active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.primary-nav .has-dropdown i {
+  margin-left: 0.2rem;
+  font-size: 0.55rem;
+}
+
+/* Mobile nav collapsed */
+@media (max-width: 767.98px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .primary-nav {
+    display: none;
+  }
+
+  .primary-nav.open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-gray-200);
+    padding: 1rem;
+  }
+
+  .primary-nav.open ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* =====================  Breaking‑News Ticker  ===================== */
+.breaking-bar {
+  border-top: 1px solid var(--color-gray-200);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  overflow: hidden;
+}
+
+.container-bottom {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 0 auto;
+}
+
+.breaking-bar__label {
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.breaking-ticker {
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+
+.breaking-ticker__item {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ticker-move 18s linear infinite;
+}
+
+@keyframes ticker-move {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* =====================  Action & Social Icons  ===================== */
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex: 0 0 auto;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary-border);
+  border-radius: 6px;
+  background: var(--background-color-primary);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+  background: var(--color-primary-foreground);
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icons a {
+  background-color: var(--color-primary);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+  opacity: 0.75;
+}
+
+/* =====================  Featured Section ===================== */
+
+.featured-section {
+  padding: 40px 0;
+}
+
+
+
+.col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.col-middle {
+  grid-column: span 5;
+}
+
+.col-right {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Text card */
+.card-text {
+  background: var(--color-white);
+
+  border-bottom: 1px solid #777;
+
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tag-india {
+  background-color: #d1f7e2;
+  color: #0d6b58;
+}
+
+.tag-gaza-genocide {
+  background-color: #ffe3e3;
+  color: #d82424;
+}
+
+.tag-north-india {
+  background-color: #E3F2FD;
+  color: #1565C0;
+}
+
+.tag-south-india {
+  background-color: #FFF3E0;
+  color: #EF6C00;
+}
+
+.tag-central-india {
+  background-color: #f3e8ff;
+  color: #8a2be2;
+}
+
+.tag-east-india {
+  background-color: #e6fcf5;
+  color: #20c997;
+}
+
+.tag-western-india {
+  background-color: #fff9db;
+  color: #ffc107;
+}
+
+.tag-north-east-india {
+  background-color: #f0f5e5;
+  color: #51cf66;
+}
+
+.tag-world {
+  background-color: #e7f1ff;
+  color: #339af0;
+}
+
+.tag-kashmir {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.tag-features {
+  background-color: #FBE9E7;
+  color: #D84315;
+}
+
+.tag-factcheck {
+  background-color: #e7f5ff;
+  color: #1971c2;
+}
+
+.tag-opinion {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.tag-science-technology {
+  background-color: #e0fcff;
+  color: #12b886;
+}
+
+.tag-photo {
+  background-color: #e5f2ff;
+  color: #339af0;
+}
+
+.tag-film-and-tv {
+  background-color: #f0e5ff;
+  color: #6610f2;
+}
+
+.tag-video {
+  background-color: #e6fadf;
+  color: #51cf66;
+}
+
+.tag-education {
+  background-color: #fffcd5;
+  color: #f59f00;
+}
+
+.tag-music {
+  background-color: #ffe3ec;
+  color: #f06595;
+}
+
+.tag-business-and-economy {
+  background-color: #fffdd0;
+  color: #f08c00;
+}
+
+.tag-bookshelf {
+  background-color: #ffe5f0;
+  color: #e64980;
+}
+
+.tag-sports {
+  background-color: #e5f7dc;
+  color: #37b24d;
+}
+
+.tag-lifestyle {
+  background-color: #f0fff4;
+  color: #51cf66;
+}
+
+.card-text:last-child {
+  border: none;
+}
+
+.card-text h2 {
+  font-size: 1.5rem;
+  margin: 16px 0 16px;
+  line-height: 1.2;
+}
+
+.card-text:last-child h2 {
+  margin-top: 0;
+}
+
+.card-text .excerpt {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 20px;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.meta time,
+.meta .author {
+  background-color: #F2F2F2;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.25em 0.75em;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.meta time img,
+.meta .author img {
+  width: auto !important;
+}
+
+/* Large image card with overlay */
+.card-image-large {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 540px;
+}
+
+.card-image-large img {
+  width: 100%;
+  display: block;
+}
+
+.card-image-large .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  padding: 1rem;
+}
+
+
+.card-image-large .overlay h2 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.card-image-large .overlay p {
+  color: #fff;
+  font-size: 0.85rem;
+
+}
+
+.card-image-small {
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Small image top */
+.card-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+/* Small text card */
+.card-text-small {
+  background: var(--color-white);
+}
+
+
+.card-text-small h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.card-text-small p {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.card-text-small .meta {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+/* Thumbnail carousel */
+.col-footer-carousel {
+  margin-top: 16px;
+}
+
+.thumb-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0 0;
+  border-top: 1px solid #777;
+}
+
+.card-thumb {
+  min-width: 200px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+.card-thumb img {
+  width: 100%;
+  display: block;
+}
+
+.group-small-articles {
+  display: flex;
+  gap: 12px;
+}
+
+.group-small-articles .card-thumb {
+  flex-direction: column-reverse;
+  min-width: auto;
+  gap: 10px;
+}
+
+.group-small-articles .card-thumb .tag,
+.thumb-caption .tag {
+  font-size: 10px;
+
+}
+
+.group-small-articles .thumb-caption h4 {
+  font-size: 13px;
+}
+
+.thumb-caption h4 {
+  font-size: 0.9rem;
+  margin: 0.3rem 0 0;
+}
+
+.thumb-caption p {
+  font-size: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .featured-section .grid-layout {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .col-left,
+  .col-middle,
+  .col-right {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .featured-section .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .col-left,
+  .col-middle,
+  .col-right,
+  .col-footer-carousel {
+    grid-column: span 1;
+  }
+}
+
+.trending-section {
+  padding: 40px 0;
+}
+
+.trending-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-family: "OpenSans-SemiBold";
+
+}
+
+/* More professional pulsing animation for .trending-dot */
+.trending-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  position: relative;
+  /* smoother timing function */
+  animation: pulse 2s cubic-bezier(0.66, 0, 0, 1) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(216, 36, 36, 0.7);
+  }
+
+  50% {
+    transform: scale(1.4);
+    box-shadow: 0 0 0 8px rgba(216, 36, 36, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(216, 36, 36, 0);
+  }
+}
+
+
+
+.trend-right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.trend-large .card-large {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 400px;
+}
+
+.card-large .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-large .card-body {
+  position: absolute;
+  bottom: 16px;
+  left: 1rem;
+  border-radius: 0.25rem;
+  color: #fff;
+
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(0, 0, 0, .6);
+}
+
+.card-large .card-body .card-title {
+  margin: 0.75rem 0 0;
+  font-size: 1.25rem;
+}
+
+.small-cards-wrapper {
+  overflow: hidden;
+}
+
+.small-cards {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  gap: 1rem;
+
+}
+
+.small-cards .card-small {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.small-cards .card-small .thumb {
+  width: 140px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.small-cards .card-small .info {
+  flex: 1;
+}
+
+.card-small .title {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+
+
+.trending-controls {
+  position: absolute;
+  right: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trending-controls button {
+  background: none;
+  border: none;
+  color: var(--color-dark);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.item.group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .trending-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trend-large,
+  .trend-right {
+    grid-column: span 12;
+  }
+
+  .trending-controls {
+    display: none;
+  }
+}
+
+
+
+/* Features Section Styles */
+.features-section .section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "OpenSans-Bold";
+
+}
+
+.section-title hr {
+  width: 100%;
+  border-top: 3px solid var(--color-primary);
+  opacity: 1;
+}
+
+/* .features-section .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: var(--color-primary);
+} */
+.feature-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.feature-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.feature-body .tag {
+  font-size: 0.7rem;
+}
+
+.feature-body {
+  padding-top: 16px;
+}
+
+.feature-body .feature-title {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+.photos-section {
+  background: #EFF9FF;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.photos-title {
+  font-size: 1.1rem;
+  font-family: "OpenSans-Bold";
+
+  border-left: 3px solid var(--color-primary);
+  padding-left: 0.5rem;
+}
+
+.photos-section .photo-hero {
+  height: 420px;
+}
+
+.photo-hero img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Custom Owl Carousel dots */
+.photos-slider .owl-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.photos-slider .owl-dots .owl-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.20rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.photos-slider .owl-dots .owl-dot.active {
+  opacity: 1;
+  width: 36px;
+  height: 8px;
+  border-radius: 6px;
+
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+
+}
+
+.small-photo-card img {
+  object-fit: cover;
+}
+
+.small-photo-title {
+  font-size: 0.85rem;
+}
+
+.small-photos .tag,
+.small-photos .meta time, .small-photos .meta .author
+{
+  font-size: 10px;
+}
