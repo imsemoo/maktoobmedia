@@ -1053,7 +1053,7 @@ ul {
 }
 
 .small-photos .tag,
-.small-photos .meta time, .small-photos .meta .author
-{
+.small-photos .meta time,
+.small-photos .meta .author {
   font-size: 10px;
 }
