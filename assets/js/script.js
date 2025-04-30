@@ -91,7 +91,19 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   $('.films-prev').click(() => $carousel.trigger('prev.owl.carousel'));
   $('.films-next').click(() => $carousel.trigger('next.owl.carousel'));
-
+  const $owl = $('.opinion-carousel').owlCarousel({
+    loop: false,
+    margin: 20,
+    nav: false,
+    dots: false,
+    responsive: {
+      0:   { items: 1 },
+      576: { items: 2 },
+      992: { items: 3 }
+    }
+  });
+  $('.opinion-prev').click(()=> $owl.trigger('prev.owl.carousel'));
+  $('.opinion-next').click(()=> $owl.trigger('next.owl.carousel'));
   // Video modal logic
   const modal = document.getElementById('videoModal');
   const iframe = document.getElementById('videoIframe');
