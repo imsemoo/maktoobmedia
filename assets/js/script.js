@@ -1,134 +1,156 @@
 /**
  * Maktoobmedia Script File
  * Author: Islam Nasser
- * Version: 1.0 • 29‑Apr‑2025
+ * Version: 1.1 • 30‑Apr‑2025
+ * Description: Initialize site interactions: ticker, navigation, carousels, and video modal.
  */
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Breaking News Ticker — rotates headlines
-  (function () {
-    const headlines = [
-      "Israel kills more than 70 Palestinians",
-      "UN Security Council debates Gaza ceasefire",
-      "Mass protests sweep Tel Aviv against the war",
-      "WHO warns Gaza health system is collapsing"
-    ];
-    const tickerSpan = document.getElementById('breakingTickerText');
-    let currentIndex = 0;
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % headlines.length;
-      if (tickerSpan) tickerSpan.textContent = headlines[currentIndex];
-    }, 8000);
-  })();
+document.addEventListener('DOMContentLoaded', () => {
+  initTicker();
+  initMobileNav();
+  initCarousels();
+  initVideoModal();
+});
 
-  // Mobile menu toggle
+/**
+ * Rotates breaking news headlines in the ticker every 8 seconds.
+ */
+function initTicker() {
+  const headlines = [
+    'Israel kills more than 70 Palestinians',
+    'UN Security Council debates Gaza ceasefire',
+    'Mass protests sweep Tel Aviv against the war',
+    'WHO warns Gaza health system is collapsing'
+  ];
+  const tickerEl = document.getElementById('breakingTickerText');
+  let index = 0;
+  if (!tickerEl) return;
+
+  setInterval(() => {
+    index = (index + 1) % headlines.length;
+    tickerEl.textContent = headlines[index];
+  }, 8000);
+}
+
+/**
+ * Toggles the mobile navigation menu when the menu button is clicked.
+ */
+function initMobileNav() {
   const toggleBtn = document.querySelector('.menu-toggle');
   const primaryNav = document.querySelector('.primary-nav');
-  if (toggleBtn && primaryNav) {
-    toggleBtn.addEventListener('click', () => {
-      primaryNav.classList.toggle('open');
-    });
-  }
+  if (!toggleBtn || !primaryNav) return;
 
-  // Initialize Owl Carousel components
-  if (typeof $ === 'function' && $.fn.owlCarousel) {
-    // Thumbnail carousel in footer
-    $('.thumb-carousel.owl-carousel').owlCarousel({
-      loop: false,
-      margin: 16,
-      nav: false,
-      dots: false,
-      responsive: {
-        0: { items: 1 },
-        576: { items: 2 },
-        768: { items: 3 },
-        992: { items: 4 }
-      }
-    });
+  toggleBtn.addEventListener('click', () => {
+    primaryNav.classList.toggle('open');
+  });
+}
 
-    // Small cards carousel in Trending section
-    $('.small-cards.owl-carousel').owlCarousel({
-      items: 1,
-      loop: true,
-      margin: 0,
-      nav: false,
-      dots: false,
-      smartSpeed: 600,
-      animateIn: 'slideInDown',
-      animateOut: 'slideOutUp',
-      mouseDrag: false,
-      touchDrag: true,
-      pullDrag: true
-    });
+/**
+ * Initializes all OwlCarousel sliders with refined animations and controls.
+ */
+function initCarousels() {
+  if (typeof $ !== 'function' || !$.fn.owlCarousel) return;
 
-    // Photos slider carousel
-    $('.photos-slider.owl-carousel').owlCarousel({
-      items: 1,
-      loop: true,
-      margin: 0,
-      nav: false,
-      dots: true,
-      smartSpeed: 600,
-      autoplay: false
-    });
-
-    // Trending vertical controls
-    const smallCards = $('.small-cards.owl-carousel');
-    document.querySelector('.trend-prev')?.addEventListener('click', () => smallCards.trigger('prev.owl.carousel'));
-    document.querySelector('.trend-next')?.addEventListener('click', () => smallCards.trigger('next.owl.carousel'));
-  }
-
-  const $carousel = $('.films-carousel').owlCarousel({
+  // Footer thumbnail carousel
+  $('.thumb-carousel.owl-carousel').owlCarousel({
     loop: false,
-    margin: 20,
-    nav: false,
-    dots: false,
+    margin: 16,
+    smartSpeed: 500,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
     responsive: {
       0: { items: 1 },
       576: { items: 2 },
-      992: { items: 3 }
+      768: { items: 3 },
+      992: { items: 4 }
     }
   });
-  $('.films-prev').click(() => $carousel.trigger('prev.owl.carousel'));
-  $('.films-next').click(() => $carousel.trigger('next.owl.carousel'));
-  const $owl = $('.opinion-carousel').owlCarousel({
+
+  // Trending section vertical slider
+  const trendingEl = $('.small-cards.owl-carousel');
+  trendingEl.owlCarousel({
+    items: 1,
+    loop: true,
+    dots:false,
+    smartSpeed: 600,
+    animateIn: 'fadeInUp',
+    animateOut: 'fadeOutDown',
+    mouseDrag: false,
+    touchDrag: true
+  });
+  document.querySelector('.trend-prev')?.addEventListener('click', () => trendingEl.trigger('prev.owl.carousel'));
+  document.querySelector('.trend-next')?.addEventListener('click', () => trendingEl.trigger('next.owl.carousel'));
+
+  // Photos slider carousel
+  $('.photos-slider.owl-carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    smartSpeed: 800,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    dots: true,
+    nav: false,
+    autoplay: false
+  });
+
+  // Films & TV carousel with custom controls
+  const filmCarousel = $('.films-carousel.owl-carousel').owlCarousel({
     loop: false,
     margin: 20,
-    nav: false,
+    smartSpeed: 500,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
     dots: false,
-    responsive: {
-      0:   { items: 1 },
-      576: { items: 2 },
-      992: { items: 3 }
-    }
+    nav: false,
+    responsive: { 0: { items: 1 }, 576: { items: 2 }, 992: { items: 3 } }
   });
-  $('.opinion-prev').click(()=> $owl.trigger('prev.owl.carousel'));
-  $('.opinion-next').click(()=> $owl.trigger('next.owl.carousel'));
-  // Video modal logic
+  document.querySelector('.films-prev')?.addEventListener('click', () => filmCarousel.trigger('prev.owl.carousel'));
+  document.querySelector('.films-next')?.addEventListener('click', () => filmCarousel.trigger('next.owl.carousel'));
+
+  // Opinion carousel with fade transitions
+  const opinionCarousel = $('.opinion-carousel.owl-carousel').owlCarousel({
+    loop: false,
+    margin: 20,
+    smartSpeed: 500,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    dots: false,
+    nav: false,
+    responsive: { 0: { items: 1 }, 576: { items: 2 }, 992: { items: 3 } }
+  });
+  document.querySelector('.opinion-prev')?.addEventListener('click', () => opinionCarousel.trigger('prev.owl.carousel'));
+  document.querySelector('.opinion-next')?.addEventListener('click', () => opinionCarousel.trigger('next.owl.carousel'));
+}
+
+/**
+ * Handles opening and closing of the video modal with auto-playing iframe.
+ */
+function initVideoModal() {
   const modal = document.getElementById('videoModal');
   const iframe = document.getElementById('videoIframe');
-  const closeBtn = modal.querySelector('.modal-close');
+  const closeBtn = modal?.querySelector('.modal-close');
 
-  // Open modal and load video
-  document.querySelectorAll('.video-wrapper, .thumb-wrapper').forEach(wrapper => {
-    wrapper.addEventListener('click', () => {
-      const url = wrapper.dataset.videoUrl;
-      iframe.src = url + '?autoplay=1';
+  if (!modal || !iframe || !closeBtn) return;
+
+  // Open modal and start video
+  document.querySelectorAll('[data-video-url]').forEach(el => {
+    el.addEventListener('click', () => {
+      const url = el.dataset.videoUrl;
+      iframe.src = `${url}?autoplay=1`;
       modal.classList.add('open');
     });
   });
 
   // Close modal and stop video
-  closeBtn.addEventListener('click', () => {
+  const closeModal = () => {
     modal.classList.remove('open');
     iframe.src = '';
-  });
+  };
 
-  // Close on outside click
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close when clicking outside iframe
   modal.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.classList.remove('open');
-      iframe.src = '';
-    }
+    if (e.target === modal) closeModal();
   });
-});
+}
