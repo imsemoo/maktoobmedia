@@ -4,7 +4,50 @@
  * Version: 1.1 • 30‑Apr‑2025
  * Description: Initialize site interactions: ticker, navigation, carousels, and video modal.
  */
+// Enhanced dropdown toggle logic
+(function () {
+  // Handle multiple instances of tags and author panels
+  const setups = [];
+  document.querySelectorAll('.tag-more-wrapper').forEach(wrapper => {
+    const btn = wrapper.querySelector('.tag-more');
+    const panel = wrapper.querySelector('.tags-dropdown');
+    setups.push({ btn, panel });
+  });
+  document.querySelectorAll('.author-wrapper').forEach(wrapper => {
+    const btn = wrapper.querySelector('.author');
+    const panel = wrapper.querySelector('.author-popup');
+    setups.push({ btn, panel });
+  });
 
+  // Toggle logic and click-outside
+  setups.forEach(({ btn, panel }) => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      // close others
+      setups.forEach(item => { if (item.panel !== panel) item.panel.classList.remove('open'); });
+      panel.classList.toggle('open');
+    });
+  });
+  document.addEventListener('click', () => { setups.forEach(item => item.panel.classList.remove('open')); });
+})();
+/**
+   * Quantity control logic
+   */
+document.querySelectorAll('.product-card').forEach(card => {
+  const decreaseBtn = card.querySelector('.qty-decrease');
+  const increaseBtn = card.querySelector('.qty-increase');
+  const qtyInput = card.querySelector('.qty-input');
+
+  decreaseBtn.addEventListener('click', () => {
+    let qty = parseInt(qtyInput.value, 10);
+    if (qty > 1) qtyInput.value = qty - 1;
+  });
+
+  increaseBtn.addEventListener('click', () => {
+    let qty = parseInt(qtyInput.value, 10);
+    qtyInput.value = qty + 1;
+  });
+});
 document.addEventListener('DOMContentLoaded', () => {
   initTicker();
   initMobileNav();
@@ -71,7 +114,7 @@ function initCarousels() {
   trendingEl.owlCarousel({
     items: 1,
     loop: true,
-    dots:false,
+    dots: false,
     smartSpeed: 600,
     animateIn: 'fadeInUp',
     animateOut: 'fadeOutDown',
@@ -153,4 +196,7 @@ function initVideoModal() {
   modal.addEventListener('click', e => {
     if (e.target === modal) closeModal();
   });
+
+
+
 }
