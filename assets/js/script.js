@@ -6,11 +6,11 @@
  */
 // Enhanced dropdown toggle logic
 (function () {
-  // Handle multiple instances of tags and author panels
+  // Handle multiple instances of article-categories and author panels
   const setups = [];
-  document.querySelectorAll('.tag-more-wrapper').forEach(wrapper => {
-    const btn = wrapper.querySelector('.tag-more');
-    const panel = wrapper.querySelector('.tags-dropdown');
+  document.querySelectorAll('.category-more-wrapper').forEach(wrapper => {
+    const btn = wrapper.querySelector('.category-more');
+    const panel = wrapper.querySelector('.categories-dropdown');
     setups.push({ btn, panel });
   });
   document.querySelectorAll('.author-wrapper').forEach(wrapper => {

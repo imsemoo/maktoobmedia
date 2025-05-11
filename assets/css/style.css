@@ -462,7 +462,7 @@ ul {
 
 }
 
-.tag {
+.category {
   display: inline-block;
   padding: 0.25em 0.75em;
   font-size: 12px;
@@ -472,117 +472,117 @@ ul {
   width: max-content;
 }
 
-.tag-india {
+.category-india {
   background-color: #d1f7e2;
   color: #0d6b58;
 }
 
-.tag-gaza-genocide {
+.category-gaza-genocide {
   background-color: #ffe3e3;
   color: #d82424;
 }
 
-.tag-north-india {
+.category-north-india {
   background-color: #E3F2FD;
   color: #1565C0;
 }
 
-.tag-south-india {
+.category-south-india {
   background-color: #FFF3E0;
   color: #EF6C00;
 }
 
-.tag-central-india {
+.category-central-india {
   background-color: #f3e8ff;
   color: #8a2be2;
 }
 
-.tag-east-india {
+.category-east-india {
   background-color: #e6fcf5;
   color: #20c997;
 }
 
-.tag-western-india {
+.category-western-india {
   background-color: #fff9db;
   color: #ffc107;
 }
 
-.tag-north-east-india {
+.category-north-east-india {
   background-color: #f0f5e5;
   color: #51cf66;
 }
 
-.tag-world {
+.category-world {
   background-color: #e7f1ff;
   color: #339af0;
 }
 
-.tag-kashmir {
+.category-kashmir {
   background-color: #e9ecef;
   color: #495057;
 }
 
-.tag-features {
+.category-features {
   background-color: #FBE9E7;
   color: #D84315;
 }
 
-.tag-factcheck {
+.category-factcheck {
   background-color: #e7f5ff;
   color: #1971c2;
 }
 
-.tag-opinion {
+.category-opinion {
   background-color: #f8f9fa;
   color: #212529;
 }
 
-.tag-science-technology {
+.category-science-technology {
   background-color: #e0fcff;
   color: #12b886;
 }
 
-.tag-photo {
+.category-photo {
   background-color: #e5f2ff;
   color: #339af0;
 }
 
-.tag-film-and-tv {
+.category-film-and-tv {
   background-color: #f0e5ff;
   color: #6610f2;
 }
 
-.tag-video {
+.category-video {
   background-color: #e6fadf;
   color: #51cf66;
 }
 
-.tag-education {
+.category-education {
   background-color: #fffcd5;
   color: #f59f00;
 }
 
-.tag-music {
+.category-music {
   background-color: #ffe3ec;
   color: #f06595;
 }
 
-.tag-business-and-economy {
+.category-business-and-economy {
   background-color: #fffdd0;
   color: #f08c00;
 }
 
-.tag-bookshelf {
+.category-bookshelf {
   background-color: #ffe5f0;
   color: #e64980;
 }
 
-.tag-sports {
+.category-sports {
   background-color: #e5f7dc;
   color: #37b24d;
 }
 
-.tag-lifestyle {
+.category-lifestyle {
   background-color: #f0fff4;
   color: #51cf66;
 }
@@ -742,8 +742,8 @@ ul {
   gap: 10px;
 }
 
-.group-small-articles .card-thumb .tag,
-.thumb-caption .tag {
+.group-small-articles .card-thumb .category,
+.thumb-caption .category {
   font-size: 10px;
 
 }
@@ -970,7 +970,7 @@ ul {
   object-fit: cover;
 }
 
-.feature-body .tag {
+.feature-body .category {
   font-size: 0.7rem;
 }
 
@@ -1048,7 +1048,7 @@ ul {
   font-size: 0.85rem;
 }
 
-.small-photos .tag,
+.small-photos .category,
 .small-photos .meta time,
 .small-photos .meta .author {
   font-size: 10px;
@@ -1110,7 +1110,7 @@ ul {
   padding: 0 1rem;
 }
 
-.world-featured__meta .tag-world {
+.world-featured__meta .category-world {
   background: var(--color-world-bg, #e7f1ff);
   color: var(--color-world, #339af0);
 }
@@ -2107,20 +2107,21 @@ footer a {
   gap: 1rem;
 }
 
-/* Tags container */
-.tags {
+/* article-categories container */
+.article-categories {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 
-/* More tags trigger */
-.tag-more-wrapper {
+/* More article-categories trigger */
+.category-more-wrapper {
   position: relative;
+
 }
 
-.tag-more {
+.category-more {
   width: 32px;
   height: 32px;
   background: var(--color-primary);
@@ -2133,24 +2134,24 @@ footer a {
   transition: transform var(--transition-speed);
 }
 
-.tag-more:active {
+.category-more:active {
   transform: scale(0.88);
 }
 
 /* Tags dropdown panel */
-.tags-dropdown {
+.categories-dropdown {
   position: absolute;
   top: calc(100% + 0.6rem);
   left: 50%;
   transform: translateX(-50%) scale(0.8);
-  width: 240px;
+  width: 180px;
   background: var(--panel-bg);
   backdrop-filter: blur(12px);
   border-radius: var(--panel-radius);
   box-shadow: var(--panel-shadow);
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   gap: 0.5rem;
   opacity: 0;
   pointer-events: none;
@@ -2158,20 +2159,21 @@ footer a {
   z-index: 1000;
 }
 
-.tags-dropdown.open {
+.categories-dropdown.open {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) scale(1);
 }
 
-.tags-dropdown .tag {
+.categories-dropdown .category {
   background: var(--tag-pill-bg);
   color: var(--tag-pill-color);
   text-align: center;
   transition: background var(--transition-speed), color var(--transition-speed);
+  width: 100%;
 }
 
-.tags-dropdown .tag:hover {
+.categories-dropdown .category:hover {
   background: var(--tag-pill-hover);
   color: #fff;
 }
@@ -2760,4 +2762,246 @@ Product Card Styles
 .bank-details ul li i {
   width: 1.25rem;
   text-align: center;
+}
+
+/* Single Article Page Styles */
+.single-article-page {
+  padding: 40px 0;
+}
+
+.single-article-page h1 {
+  font-size: 2.4rem;
+  line-height: 120%;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark);
+}
+
+.single-article-page .meta-info {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.single-article-page .meta-info i {
+  margin-right: 0.25rem;
+}
+
+
+
+.share-buttons button+button {
+  margin-left: 0.5rem;
+}
+
+.article-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.single-article-page p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.single-article-page .title-single-article {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.tags-list .tag {
+  font-size: 0.85rem;
+  padding: 0.25em 0.75em;
+}
+
+
+/* Donate banner */
+.donate-banner img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
+
+
+
+.share-buttons {
+  margin-bottom: 20px;
+}
+
+.share-buttons h5 {
+  font-family: "OpenSans-Bold";
+  margin-right: 10px;
+
+}
+
+.share-buttons button {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  background: #F5F5F5;
+  font-family: "OpenSans-SemiBold";
+
+}
+
+.line-horizontal {
+  background: rgba(70, 70, 70, 0.20);
+  width: 1px;
+  height: 14px;
+}
+
+.share-buttons .button-facebook {
+  border: 1px solid rgba(24, 119, 242, 0.20);
+  background: #E8F0FE;
+  color: #1877F2;
+}
+
+.share-buttons .button-facebook:hover {
+  background: #1877F2;
+  color: #fff;
+}
+
+.share-buttons .button-facebook .line-horizontal {
+  background: rgba(24, 119, 242, 0.20);
+
+}
+
+.share-buttons .button-twitter {
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  background: #F5F5F5;
+  color: #000000;
+}
+
+.share-buttons .button-twitter:hover {
+  background: #000000;
+  color: #fff;
+}
+
+.share-buttons .button-twitter .line-horizontal {
+  background: rgba(0, 0, 0, 0.20);
+
+}
+
+
+.share-buttons .button-whatsapp {
+  border: 1px solid rgba(37, 211, 102, 0.20);
+  background: #E9FCEF;
+  color: #25D366;
+}
+
+.share-buttons .button-whatsapp:hover {
+  background: #25D366;
+  color: #fff;
+}
+
+.share-buttons .button-whatsapp .line-horizontal {
+  background: rgba(37, 211, 102, 0.20);
+}
+
+.share-buttons .button-instagram {
+  border: 1px solid hsl(340 75% 90% / 1);
+  background: #FDEDEF;
+  color: #E1306C;
+}
+
+.share-buttons .button-instagram:hover {
+  background: #E1306C;
+  color: #fff;
+}
+
+.share-buttons .button-instagram .line-horizontal {
+  background: hsl(340 75% 90% / 1);
+}
+
+.post-authors__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#authors-heading {
+  position: relative;
+  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: start;
+}
+
+#authors-heading::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: var(--color-primary);
+  left: 0;
+  bottom: 0;
+}
+
+.post-authors__list .post-authors__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-primary-border);
+  padding-bottom: 16px;
+}
+
+.post-authors__list .post-authors__item:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.post-authors__info {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+}
+
+.post-authors__avatar {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+
+.post-authors__name {
+  color: #000;
+  font-size: 1rem;
+
+  font-family: "OpenSans-SemiBold";
+
+
+}
+
+.post-authors__role {
+  margin: 0 !important;
+  font-size: .85rem;
+}
+
+.post-authors__social {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+}
+
+.post-authors__social a {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 25px;
+  border: 0.5px solid #EE2937;
+  background: rgba(246, 173, 178, 0.30);
+  color: #EE2937;
+  font-size: .85rem;
 }
