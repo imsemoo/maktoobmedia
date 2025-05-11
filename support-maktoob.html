@@ -83,119 +83,252 @@
 
   <!-- Banner -->
   <section class="support-banner">
-    <div class="container">
-      <h1>Our Stories Define Us</h1>
-      <div class="subtitle">Support Maktoob — www.maktoobmedia.com</div>
-    </div>
+    <img src="./assets/img/support-header.svg" alt="">
   </section>
 
   <!-- Intro Content -->
-  <div class="support-content container">
-    <p>Maktoob is an independent Indian media outlet that emphasizes covering Human rights and minorities. Maktoob is
-      now being read across India, and in these extraordinary times, our editorial independence has never been more
-      important. Your moral and financial support protects our commitment to fierce journalism...</p>
-    <!-- rest of paragraphs omitted for brevity -->
+  <div class="support-content container py-5">
+    <p class="mb-4">Maktoob is an independent Indian media outlet that emphasises covering Human rights and minorities.
+      Maktoob is now being read across India, and in these extraordinary times, our editorial independence has never
+      been more important. Your moral and financial support protects our commitment to fierce journalism. Ours is a
+      small but significant media initiative that promises always to maintain its carefully cultivated space of ideas
+      and reflections.</p>
+    <p class="mb-4">Maktoob's coverage of religious freedom and social exclusion in India has become resourceful for
+      many advocacy groups working for accountability from the Indian state. Over the years, Maktoob has created a
+      dynamic audience that makes timely interventions that pressure stakeholders to respond.</p>
+    <p class="mb-4">Our thoughtful, in-depth journalism values voices that are often relegated to oblivion in the
+      deafening commotion of mainstream media. We are sharp in our editorial positions and succinct in our journalistic
+      pursuits. We persevere in our attempt to uphold democratic and plural ideals and persist with our questions and
+      challenges to power.</p>
+    <p class="mb-4">You can look at the stories we cover here, and we are confident they will speak to you. Our platform
+      has become a launching place for dozens of aspiring journalists from marginalised sections in India. We have been
+      giving space to hundreds of opinion articles that shaped political questions in India.</p>
+    <p class="mb-4">Our survival is getting more difficult with each passing day, and only support from readers and
+      concerned citizens like you can help us sustain ourselves.</p>
+    <p class="mb-4">No matter how unpredictable the future seems, we will remain with you. We have to remain together,
+      resist together, and celebrate life together. Turkish poet Nazim Hikmet once wrote:</p>
+    <blockquote class="blockquote mb-4 ps-3 border-start">To live like a tree in solitude and freedom, like a forest in
+      solidarity.</blockquote>
+    <p class="mb-4">Should you have any queries, please do not hesitate to contact us.</p>
+    <p class="mb-4">We are grateful for your time and patience and hope that we have found in you a co-traveler, a
+      companion, a tree in the limitless forest of possibilities.</p>
+    <p class="mt-5">Yours sincerely,<br>Aslah Kayyalakkath<br>Editor, Maktoob</p>
   </div>
 
   <!-- Subscription Plans -->
-  <div class="container subscriptions">
-    <!-- Tabs -->
-    <div class="subscription-tabs">
-      <button class="active">Indian Subscription</button>
-      <button>International Subscription</button>
-    </div>
-    <!-- Plans Grid -->
-    <div class="subscription-cards">
-      <!-- Half-year -->
-      <div class="card-plan">
-        <div class="plan-header">Half-year subscription</div>
-        <div class="plan-body">
-          <div class="plan-price">₹600.00</div>
-          <div class="plan-old">₹700.00</div>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
-            <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
-          </ul>
-        </div>
-        <button class="btn-plan">Try now</button>
-      </div>
-      <!-- Yearly -->
-      <div class="card-plan">
-        <div class="plan-header">Yearly subscription</div>
-        <div class="plan-body">
-          <div class="plan-price">₹1,200.00</div>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
-            <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
-          </ul>
-        </div>
-        <button class="btn-plan">Try now</button>
-      </div>
-      <!-- Two-year -->
-      <div class="card-plan">
-        <div class="plan-header">Two-year subscription</div>
-        <div class="plan-body">
-          <div class="plan-price">₹2,000.00</div>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
-            <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
-          </ul>
-        </div>
-        <button class="btn-plan">Try now</button>
-      </div>
-      <!-- Five-year -->
-      <div class="card-plan">
-        <div class="plan-header">Five-year subscription</div>
-        <div class="plan-body">
-          <div class="plan-price">₹5,000.00</div>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
-            <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
-          </ul>
-        </div>
-        <button class="btn-plan">Try now</button>
-      </div>
-      <!-- Premium -->
-      <div class="card-plan">
-        <div class="plan-header">Premium subscription</div>
-        <div class="plan-body">
-          <div class="plan-price">₹2,000.00</div>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
-            <li><i class="fa-solid fa-check"></i> Maktoob Opinion newsletter</li>
-            <li><i class="fa-solid fa-check"></i> Monthly merchandise</li>
-          </ul>
-        </div>
-        <button class="btn-plan">Try now</button>
-      </div>
-    </div>
-  </div>
+  <section class="subscriptions-section py-5">
+    <div class="container">
+      <div class=" subscriptions">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="subscriptionTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="indian-tab" data-bs-toggle="tab" data-bs-target="#indian" type="button"
+              role="tab" aria-controls="indian" aria-selected="true">
+              Indian Subscription
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="intl-tab" data-bs-toggle="tab" data-bs-target="#international" type="button"
+              role="tab" aria-controls="international" aria-selected="false">
+              International Subscription
+            </button>
+          </li>
+        </ul>
 
-  <!-- One-time Payment -->
-  <div class="container one-time">
-    <div>OR</div>
-    <button class="btn-onetime"><i class="fa-solid fa-credit-card"></i> One-time Payment (via Razorpay)</button>
-  </div>
+        <!-- Tab panes -->
+        <div class="tab-content mt-4" id="subscriptionTabContent">
+          <!-- Indian Subscription -->
+          <div class="tab-pane fade show active" id="indian" role="tabpanel" aria-labelledby="indian-tab">
+            <div class="subscription-cards">
+              <!-- Half-year -->
+              <div class="card-plan">
+                <div class="plan-header">Half-year subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">₹600.00</div>
+                  <div class="plan-old">₹700.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+              <!-- Yearly -->
+              <div class="card-plan">
+                <div class="plan-header">Yearly subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">₹1,200.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+              <!-- Two-year -->
+              <div class="card-plan">
+                <div class="plan-header">Two-year subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">₹2,000.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+              <!-- Five-year -->
+              <div class="card-plan">
+                <div class="plan-header">Five-year subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">₹5,000.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+              <!-- Premium -->
+              <div class="card-plan">
+                <div class="plan-header">Premium subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">₹2,000.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Maktoob Opinion newsletter</li>
+                    <li><i class="fa-solid fa-check"></i> Monthly merchandise</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+            </div>
+          </div>
 
+          <!-- International Subscription -->
+          <div class="tab-pane fade" id="international" role="tabpanel" aria-labelledby="intl-tab">
+            <div class="subscription-cards">
+              <!-- Example: replicate plans with USD pricing -->
+              <div class="card-plan">
+                <div class="plan-header">Half-year subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">$50.00</div>
+                  <div class="plan-old">$60.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+              <div class="card-plan">
+                <div class="plan-header">Yearly subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">$100.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+              <div class="card-plan">
+                <div class="plan-header">Two-year subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">$300.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+              <div class="card-plan">
+                <div class="plan-header">Five-year subscription</div>
+                <div class="plan-body">
+                  <div class="plan-price">$500.00</div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Weekly Newsletters</li>
+                    <li><i class="fa-solid fa-check"></i> Subscribers-only events</li>
+                  </ul>
+                </div>
+                <button class="btn-plan">Try now</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- One-time Payment Section -->
+        <div class="container">
+          <div class="one-time d-flex flex-column align-items-center my-4">
+            <div class="d-flex align-items-center w-100 mb-3 line-en">
+              <hr>
+              <div class="fw-semibold ">OR</div>
+              <hr>
+
+            </div>
+            <button class="btn btn-onetime d-inline-flex align-items-center px-4 py-2 shadow-sm">
+              <img src="./assets/img/icons/credit.svg" alt="">
+
+              <div class="d-flex flex-column">
+                <div class="fw-bold">One-time Payment</div>
+                <small>
+                  <i class="fa-solid fa-lock "></i>
+                  Secured by Razorpay</small>
+              </div>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
   <!-- Disclaimer & Bank Details -->
-  <div class="container disclaimer">
-    <p>By proceeding, you are agreeing to our <a href="#">Terms of Service</a>.</p>
-    <p><strong>Cancellation:</strong> Please send a mail to <a
-        href="mailto:subscribe@maktoobmedia.com">subscribe@maktoobmedia.com</a> from your registered e-mail ...</p>
-    <div class="bank-details">
-      <p><strong>Bank account details:</strong></p>
-      <p>Account Name: MAKTOOB MEDIA PRIVATE LIMITED</p>
-      <p>Account Number: 060305021088</p>
-      <p>IFSC: ICIC0000603</p>
-      <p>Bank: ICICI Bank, KALLAI ROAD Branch</p>
+  <div class="container">
+    <div class="disclaimer border-start border-4 border-danger  bg-light p-4 rounded shadow-sm mb-5">
+      <p class="mb-2">
+        By proceeding, you are agreeing to our
+        <a href="#" class="text-decoration-underline">Terms of Service</a>.
+      </p>
+      <p class="mb-3">
+        <strong>Cancellation:</strong>
+        Please send an email to
+        <a href="mailto:subscribe@maktoobmedia.com" class="text-decoration-underline">subscribe@maktoobmedia.com</a>
+        from your registered address to cancel your subscription.
+      </p>
+      <div class="bank-details">
+        <p class="fw-bold mb-2">Bank Account Details:</p>
+        <ul class="list-unstyled mb-0">
+          <li class="d-flex align-items-start mb-1">
+            <i class="fa-solid fa-building-columns me-2 text-danger "></i>
+            MAKTOOB MEDIA PRIVATE LIMITED
+          </li>
+          <li class="d-flex align-items-start mb-1">
+            <i class="fa-solid fa-hashtag me-2 text-danger "></i>
+            Account No: 060305021088
+          </li>
+          <li class="d-flex align-items-start mb-1">
+            <i class="fa-solid fa-key me-2 text-danger "></i>
+            IFSC: ICIC0000603
+          </li>
+          <li class="d-flex align-items-start">
+            <i class="fa-solid fa-bank me-2 text-danger "></i>
+            ICICI Bank, KALLAI ROAD Branch
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+
+
 
   <!-- Donation Banner -->
-  <div class="container my-4">
-    <img src="assets/img/donate-banner.jpg" alt="Donate Now" class="img-fluid">
+  <div class="container mt-4 mb-4">
+    <img src="./assets/img/Vision-2025-3 1.svg" alt="" class="bannar w-100">
   </div>
-
+  <div class="pt-4"></div>
 
   <footer class="site-footer">
     <div class="container footer-container">
