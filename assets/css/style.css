@@ -3202,14 +3202,3 @@ Product Card Styles
   font-size: 1rem;
   margin: 0.5rem 0;
 }
-
-.work-meta {
-  font-size: 0.8rem;
-  color: var(--color-muted);
-  margin-bottom: 0.75rem;
-}
-
-.work-tags .badge {
-  font-size: 0.75rem;
-  margin-right: 0.5rem;
-}
