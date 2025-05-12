@@ -200,3 +200,16 @@ function initVideoModal() {
 
 
 }
+document.querySelectorAll('.play-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const videoUrl = btn.getAttribute('data-video-url');
+    const iframe = document.getElementById('videoIframe');
+    iframe.src = `${videoUrl}?autoplay=1`;
+    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    modal.show();
+
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+      iframe.src = ''; // stop video on close
+    });
+  });
+});

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Article — Maktoobmedia</title>
+  <!-- ─────────────────  Stylesheets  ────────────────── -->
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/normalize.css" />
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!-- =========================  Header  ========================= -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <!-- Brand -->
+        <a href="/" class="brand" aria-label="Maktoobmedia home">
+          <img src="assets/img/logo.svg" alt="Maktoobmedia logo" class="brand__mark" />
+        </a>
+
+        <!-- Main Navigation -->
+        <nav class="primary-nav" aria-label="Main navigation">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li class="has-dropdown">
+              <a href="#">India <i class="fa-solid fa-chevron-down"></i></a>
+            </li>
+            <li><a href="#">Gaza&nbsp;Genocide</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Factcheck</a></li>
+            <li><a href="#">Opinion</a></li>
+            <li><a href="#">Photo</a></li>
+            <li><a href="#">Video</a></li>
+            <li><a href="#">Film&nbsp;&amp;&nbsp;TV</a></li>
+            <li><a href="#">Bookshelf</a></li>
+          </ul>
+        </nav>
+        <!-- Search & Basket -->
+        <div class="header-actions">
+          <button class="action-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="action-btn" aria-label="Cart">
+            <i class="fa-solid fa-basket-shopping"></i>
+          </button>
+        </div>
+        <!-- Menu Toggle -->
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Breaking News Ticker -->
+    <div class="breaking-bar" role="region" aria-label="Breaking news ticker">
+      <div class="container container-bottom">
+        <span class="breaking-bar__label">Breaking news:</span>
+        <div class="breaking-ticker" aria-live="polite">
+          <span class="breaking-ticker__item" id="breakingTickerText">Israel kills more than 70
+            Palestinians</span>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="search-section py-5">
+    <div class="container">
+      <!-- Search Filter Bar -->
+      <div class="search-filter  d-flex align-items-center gap-3 flex-wrap mb-5">
+        <div class="input-icon">
+          <i class="fa-solid fa-calendar-days"></i>
+          <input type="date" class="form-control" placeholder="Date from">
+        </div>
+        <div class="input-icon">
+          <i class="fa-solid fa-calendar-days"></i>
+          <input type="date" class="form-control" placeholder="Date to">
+        </div>
+        <div class="input-icon">
+          <i class="fa-solid fa-layer-group"></i>
+          <select class="form-select">
+            <option selected>Category</option>
+            <option>India</option>
+            <option>Gaza</option>
+            <option>World</option>
+          </select>
+        </div>
+        <div class="input-icon">
+          <i class="fa-solid fa-file-lines"></i>
+          <select class="form-select">
+            <option selected>Type</option>
+            <option>Articles</option>
+            <option>Videos</option>
+          </select>
+        </div>
+        <button class="btn btn-primary"><i class="fa-solid fa-search"></i> Search</button>
+      </div>
+
+
+      <!-- Search Results -->
+      <div class="row search-results">
+        <!-- Article Result -->
+        <div class="col-md-4 mb-4">
+          <div class="search-card ">
+            <div class="card-image">
+              <img src="assets/img/articles/thumb1.jpg" alt="Article image" class="img-fluid">
+            </div>
+            <div class="card-content">
+              <!-- Meta & Author -->
+              <div class="meta" style="display: flex; align-items: center; gap: 1rem">
+                <time datetime="2025-03-17"><img src="assets/img/icons/icon-time.svg" alt="Time" />
+                  March 17, 2025</time>
+                <div class="author-wrapper">
+                  <div class="author">
+                    <img src="assets/img/icons/icon-write.svg" alt="Author" />
+                    Maktoob Staff
+                  </div>
+                  <div class="author-popup">
+                    <a href="/author/aisha" class="author-card"><img src="assets/img/16608.jpg"
+                        alt="Aisha Rao" /><span>Aisha
+                        Rao</span></a>
+                    <a href="/author/omar" class="author-card"><img src="assets/img/16608.jpg"
+                        alt="Omar Khalid" /><span>Omar
+                        Khalid</span></a>
+                  </div>
+                </div>
+              </div>
+              <a href="article-details.html" class="text-decoration-none">
+                <h5 class="title">Jamia students protest at Jantar Mantar against suspension of 17 students</h5>
+              </a>
+
+              <!-- article-categories & More -->
+              <div class="article-categories">
+                <span class="category category-south-india">South India</span>
+                <span class="category category-photo">Photo</span>
+                <div class="category-more-wrapper">
+                  <div class="category-more">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="categories-dropdown">
+                    <span class="category category-world">World</span>
+                    <span class="category category-sports">Sports</span>
+                    <span class="category category-opinion">Opinion</span>
+                    <span class="category category-education">Education</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Video Result -->
+        <div class="col-md-4 mb-4">
+          <div class="search-card">
+            <div class="card-image position-relative">
+              <img src="assets/img/articles/film1.jpg" alt="Video thumbnail" class="img-fluid">
+              <button class="play-btn" data-video-url="https://www.youtube.com/embed/xyz123">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+            <div class="card-content" data--h-bstatus="0OBSERVED">
+              <!-- Meta & Author -->
+              <div class="meta" style="display: flex; align-items: center; gap: 1rem" data--h-bstatus="0OBSERVED">
+                <time datetime="2025-03-17" data--h-bstatus="0OBSERVED"><img src="assets/img/icons/icon-time.svg"
+                    alt="Time" data--h-bstatus="0OBSERVED" class="">
+                  March 17, 2025</time>
+                <div class="author-wrapper" data--h-bstatus="0OBSERVED">
+                  <div class="author" data--h-bstatus="0OBSERVED">
+                    <img src="assets/img/icons/icon-write.svg" alt="Author" data--h-bstatus="0OBSERVED" class="">
+                    Maktoob Staff
+                  </div>
+                  <div class="author-popup" data--h-bstatus="0OBSERVED">
+                    <a href="/author/aisha" class="author-card" data--h-bstatus="0OBSERVED"><img
+                        src="assets/img/16608.jpg" alt="Aisha Rao" data--h-bstatus="5PROCESSED" class=""
+                        data--h-bresult="clear"><span data--h-bstatus="0OBSERVED">Aisha
+                        Rao</span></a>
+                    <a href="/author/omar" class="author-card" data--h-bstatus="0OBSERVED"><img
+                        src="assets/img/16608.jpg" alt="Omar Khalid" data--h-bstatus="5PROCESSED" class=""
+                        data--h-bresult="clear"><span data--h-bstatus="0OBSERVED">Omar
+                        Khalid</span></a>
+                  </div>
+                </div>
+              </div>
+              <a href="article-details.html" class="text-decoration-none" data--h-bstatus="0OBSERVED">
+                <h5 class="title" data--h-bstatus="0OBSERVED">Jamia students protest at Jantar Mantar against suspension
+                  of 17 students</h5>
+              </a>
+
+              <!-- article-categories & More -->
+              <div class="article-categories" data--h-bstatus="0OBSERVED">
+                <span class="category category-south-india" data--h-bstatus="0OBSERVED">South India</span>
+                <span class="category category-photo" data--h-bstatus="0OBSERVED">Photo</span>
+                <div class="category-more-wrapper" data--h-bstatus="0OBSERVED">
+                  <div class="category-more" data--h-bstatus="0OBSERVED">
+                    <i class="fa-solid fa-ellipsis" data--h-bstatus="0OBSERVED"></i>
+                  </div>
+                  <div class="categories-dropdown" data--h-bstatus="0OBSERVED">
+                    <span class="category category-world" data--h-bstatus="0OBSERVED">World</span>
+                    <span class="category category-sports" data--h-bstatus="0OBSERVED">Sports</span>
+                    <span class="category category-opinion" data--h-bstatus="0OBSERVED">Opinion</span>
+                    <span class="category category-education" data--h-bstatus="0OBSERVED">Education</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Article Result -->
+        <div class="col-md-4 mb-4">
+          <div class="search-card ">
+            <div class="card-image">
+              <img src="assets/img/articles/thumb1.jpg" alt="Article image" class="img-fluid">
+            </div>
+            <div class="card-content">
+              <!-- Meta & Author -->
+              <div class="meta" style="display: flex; align-items: center; gap: 1rem">
+                <time datetime="2025-03-17"><img src="assets/img/icons/icon-time.svg" alt="Time" />
+                  March 17, 2025</time>
+                <div class="author-wrapper">
+                  <div class="author">
+                    <img src="assets/img/icons/icon-write.svg" alt="Author" />
+                    Maktoob Staff
+                  </div>
+                  <div class="author-popup">
+                    <a href="/author/aisha" class="author-card"><img src="assets/img/16608.jpg"
+                        alt="Aisha Rao" /><span>Aisha
+                        Rao</span></a>
+                    <a href="/author/omar" class="author-card"><img src="assets/img/16608.jpg"
+                        alt="Omar Khalid" /><span>Omar
+                        Khalid</span></a>
+                  </div>
+                </div>
+              </div>
+              <a href="article-details.html" class="text-decoration-none">
+                <h5 class="title">Jamia students protest at Jantar Mantar against suspension of 17 students</h5>
+              </a>
+
+              <!-- article-categories & More -->
+              <div class="article-categories">
+                <span class="category category-south-india">South India</span>
+                <span class="category category-photo">Photo</span>
+                <div class="category-more-wrapper">
+                  <div class="category-more">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="categories-dropdown">
+                    <span class="category category-world">World</span>
+                    <span class="category category-sports">Sports</span>
+                    <span class="category category-opinion">Opinion</span>
+                    <span class="category category-education">Education</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Video Result -->
+        <div class="col-md-4 mb-4">
+          <div class="search-card">
+            <div class="card-image position-relative">
+              <img src="assets/img/articles/film1.jpg" alt="Video thumbnail" class="img-fluid">
+              <button class="play-btn" data-video-url="https://www.youtube.com/embed/xyz123">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+            <div class="card-content" data--h-bstatus="0OBSERVED">
+              <!-- Meta & Author -->
+              <div class="meta" style="display: flex; align-items: center; gap: 1rem" data--h-bstatus="0OBSERVED">
+                <time datetime="2025-03-17" data--h-bstatus="0OBSERVED"><img src="assets/img/icons/icon-time.svg"
+                    alt="Time" data--h-bstatus="0OBSERVED" class="">
+                  March 17, 2025</time>
+                <div class="author-wrapper" data--h-bstatus="0OBSERVED">
+                  <div class="author" data--h-bstatus="0OBSERVED">
+                    <img src="assets/img/icons/icon-write.svg" alt="Author" data--h-bstatus="0OBSERVED" class="">
+                    Maktoob Staff
+                  </div>
+                  <div class="author-popup" data--h-bstatus="0OBSERVED">
+                    <a href="/author/aisha" class="author-card" data--h-bstatus="0OBSERVED"><img
+                        src="assets/img/16608.jpg" alt="Aisha Rao" data--h-bstatus="5PROCESSED" class=""
+                        data--h-bresult="clear"><span data--h-bstatus="0OBSERVED">Aisha
+                        Rao</span></a>
+                    <a href="/author/omar" class="author-card" data--h-bstatus="0OBSERVED"><img
+                        src="assets/img/16608.jpg" alt="Omar Khalid" data--h-bstatus="5PROCESSED" class=""
+                        data--h-bresult="clear"><span data--h-bstatus="0OBSERVED">Omar
+                        Khalid</span></a>
+                  </div>
+                </div>
+              </div>
+              <a href="article-details.html" class="text-decoration-none" data--h-bstatus="0OBSERVED">
+                <h5 class="title" data--h-bstatus="0OBSERVED">Jamia students protest at Jantar Mantar against suspension
+                  of 17 students</h5>
+              </a>
+
+              <!-- article-categories & More -->
+              <div class="article-categories" data--h-bstatus="0OBSERVED">
+                <span class="category category-south-india" data--h-bstatus="0OBSERVED">South India</span>
+                <span class="category category-photo" data--h-bstatus="0OBSERVED">Photo</span>
+                <div class="category-more-wrapper" data--h-bstatus="0OBSERVED">
+                  <div class="category-more" data--h-bstatus="0OBSERVED">
+                    <i class="fa-solid fa-ellipsis" data--h-bstatus="0OBSERVED"></i>
+                  </div>
+                  <div class="categories-dropdown" data--h-bstatus="0OBSERVED">
+                    <span class="category category-world" data--h-bstatus="0OBSERVED">World</span>
+                    <span class="category category-sports" data--h-bstatus="0OBSERVED">Sports</span>
+                    <span class="category category-opinion" data--h-bstatus="0OBSERVED">Opinion</span>
+                    <span class="category category-education" data--h-bstatus="0OBSERVED">Education</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Article Result -->
+        <div class="col-md-4 mb-4">
+          <div class="search-card ">
+            <div class="card-image">
+              <img src="assets/img/articles/thumb1.jpg" alt="Article image" class="img-fluid">
+            </div>
+            <div class="card-content">
+              <!-- Meta & Author -->
+              <div class="meta" style="display: flex; align-items: center; gap: 1rem">
+                <time datetime="2025-03-17"><img src="assets/img/icons/icon-time.svg" alt="Time" />
+                  March 17, 2025</time>
+                <div class="author-wrapper">
+                  <div class="author">
+                    <img src="assets/img/icons/icon-write.svg" alt="Author" />
+                    Maktoob Staff
+                  </div>
+                  <div class="author-popup">
+                    <a href="/author/aisha" class="author-card"><img src="assets/img/16608.jpg"
+                        alt="Aisha Rao" /><span>Aisha
+                        Rao</span></a>
+                    <a href="/author/omar" class="author-card"><img src="assets/img/16608.jpg"
+                        alt="Omar Khalid" /><span>Omar
+                        Khalid</span></a>
+                  </div>
+                </div>
+              </div>
+              <a href="article-details.html" class="text-decoration-none">
+                <h5 class="title">Jamia students protest at Jantar Mantar against suspension of 17 students</h5>
+              </a>
+
+              <!-- article-categories & More -->
+              <div class="article-categories">
+                <span class="category category-south-india">South India</span>
+                <span class="category category-photo">Photo</span>
+                <div class="category-more-wrapper">
+                  <div class="category-more">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="categories-dropdown">
+                    <span class="category category-world">World</span>
+                    <span class="category category-sports">Sports</span>
+                    <span class="category category-opinion">Opinion</span>
+                    <span class="category category-education">Education</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Video Result -->
+        <div class="col-md-4 mb-4">
+          <div class="search-card">
+            <div class="card-image position-relative">
+              <img src="assets/img/articles/film1.jpg" alt="Video thumbnail" class="img-fluid">
+              <button class="play-btn" data-video-url="https://www.youtube.com/embed/xyz123">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+            <div class="card-content" data--h-bstatus="0OBSERVED">
+              <!-- Meta & Author -->
+              <div class="meta" style="display: flex; align-items: center; gap: 1rem" data--h-bstatus="0OBSERVED">
+                <time datetime="2025-03-17" data--h-bstatus="0OBSERVED"><img src="assets/img/icons/icon-time.svg"
+                    alt="Time" data--h-bstatus="0OBSERVED" class="">
+                  March 17, 2025</time>
+                <div class="author-wrapper" data--h-bstatus="0OBSERVED">
+                  <div class="author" data--h-bstatus="0OBSERVED">
+                    <img src="assets/img/icons/icon-write.svg" alt="Author" data--h-bstatus="0OBSERVED" class="">
+                    Maktoob Staff
+                  </div>
+                  <div class="author-popup" data--h-bstatus="0OBSERVED">
+                    <a href="/author/aisha" class="author-card" data--h-bstatus="0OBSERVED"><img
+                        src="assets/img/16608.jpg" alt="Aisha Rao" data--h-bstatus="5PROCESSED" class=""
+                        data--h-bresult="clear"><span data--h-bstatus="0OBSERVED">Aisha
+                        Rao</span></a>
+                    <a href="/author/omar" class="author-card" data--h-bstatus="0OBSERVED"><img
+                        src="assets/img/16608.jpg" alt="Omar Khalid" data--h-bstatus="5PROCESSED" class=""
+                        data--h-bresult="clear"><span data--h-bstatus="0OBSERVED">Omar
+                        Khalid</span></a>
+                  </div>
+                </div>
+              </div>
+              <a href="article-details.html" class="text-decoration-none" data--h-bstatus="0OBSERVED">
+                <h5 class="title" data--h-bstatus="0OBSERVED">Jamia students protest at Jantar Mantar against suspension
+                  of 17 students</h5>
+              </a>
+
+              <!-- article-categories & More -->
+              <div class="article-categories" data--h-bstatus="0OBSERVED">
+                <span class="category category-south-india" data--h-bstatus="0OBSERVED">South India</span>
+                <span class="category category-photo" data--h-bstatus="0OBSERVED">Photo</span>
+                <div class="category-more-wrapper" data--h-bstatus="0OBSERVED">
+                  <div class="category-more" data--h-bstatus="0OBSERVED">
+                    <i class="fa-solid fa-ellipsis" data--h-bstatus="0OBSERVED"></i>
+                  </div>
+                  <div class="categories-dropdown" data--h-bstatus="0OBSERVED">
+                    <span class="category category-world" data--h-bstatus="0OBSERVED">World</span>
+                    <span class="category category-sports" data--h-bstatus="0OBSERVED">Sports</span>
+                    <span class="category category-opinion" data--h-bstatus="0OBSERVED">Opinion</span>
+                    <span class="category category-education" data--h-bstatus="0OBSERVED">Education</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Article Result -->
+        <div class="col-md-4 mb-4">
+          <div class="search-card ">
+            <div class="card-image">
+              <img src="assets/img/articles/thumb1.jpg" alt="Article image" class="img-fluid">
+            </div>
+            <div class="card-content">
+              <!-- Meta & Author -->
+              <div class="meta" style="display: flex; align-items: center; gap: 1rem">
+                <time datetime="2025-03-17"><img src="assets/img/icons/icon-time.svg" alt="Time" />
+                  March 17, 2025</time>
+                <div class="author-wrapper">
+                  <div class="author">
+                    <img src="assets/img/icons/icon-write.svg" alt="Author" />
+                    Maktoob Staff
+                  </div>
+                  <div class="author-popup">
+                    <a href="/author/aisha" class="author-card"><img src="assets/img/16608.jpg"
+                        alt="Aisha Rao" /><span>Aisha
+                        Rao</span></a>
+                    <a href="/author/omar" class="author-card"><img src="assets/img/16608.jpg"
+                        alt="Omar Khalid" /><span>Omar
+                        Khalid</span></a>
+                  </div>
+                </div>
+              </div>
+              <a href="article-details.html" class="text-decoration-none">
+                <h5 class="title">Jamia students protest at Jantar Mantar against suspension of 17 students</h5>
+              </a>
+
+              <!-- article-categories & More -->
+              <div class="article-categories">
+                <span class="category category-south-india">South India</span>
+                <span class="category category-photo">Photo</span>
+                <div class="category-more-wrapper">
+                  <div class="category-more">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </div>
+                  <div class="categories-dropdown">
+                    <span class="category category-world">World</span>
+                    <span class="category category-sports">Sports</span>
+                    <span class="category category-opinion">Opinion</span>
+                    <span class="category category-education">Education</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- Video Result -->
+        <div class="col-md-4 mb-4">
+          <div class="search-card">
+            <div class="card-image position-relative">
+              <img src="assets/img/articles/film1.jpg" alt="Video thumbnail" class="img-fluid">
+              <button class="play-btn" data-video-url="https://www.youtube.com/embed/xyz123">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+            <div class="card-content" data--h-bstatus="0OBSERVED">
+              <!-- Meta & Author -->
+              <div class="meta" style="display: flex; align-items: center; gap: 1rem" data--h-bstatus="0OBSERVED">
+                <time datetime="2025-03-17" data--h-bstatus="0OBSERVED"><img src="assets/img/icons/icon-time.svg"
+                    alt="Time" data--h-bstatus="0OBSERVED" class="">
+                  March 17, 2025</time>
+                <div class="author-wrapper" data--h-bstatus="0OBSERVED">
+                  <div class="author" data--h-bstatus="0OBSERVED">
+                    <img src="assets/img/icons/icon-write.svg" alt="Author" data--h-bstatus="0OBSERVED" class="">
+                    Maktoob Staff
+                  </div>
+                  <div class="author-popup" data--h-bstatus="0OBSERVED">
+                    <a href="/author/aisha" class="author-card" data--h-bstatus="0OBSERVED"><img
+                        src="assets/img/16608.jpg" alt="Aisha Rao" data--h-bstatus="5PROCESSED" class=""
+                        data--h-bresult="clear"><span data--h-bstatus="0OBSERVED">Aisha
+                        Rao</span></a>
+                    <a href="/author/omar" class="author-card" data--h-bstatus="0OBSERVED"><img
+                        src="assets/img/16608.jpg" alt="Omar Khalid" data--h-bstatus="5PROCESSED" class=""
+                        data--h-bresult="clear"><span data--h-bstatus="0OBSERVED">Omar
+                        Khalid</span></a>
+                  </div>
+                </div>
+              </div>
+              <a href="article-details.html" class="text-decoration-none" data--h-bstatus="0OBSERVED">
+                <h5 class="title" data--h-bstatus="0OBSERVED">Jamia students protest at Jantar Mantar against suspension
+                  of 17 students</h5>
+              </a>
+
+              <!-- article-categories & More -->
+              <div class="article-categories" data--h-bstatus="0OBSERVED">
+                <span class="category category-south-india" data--h-bstatus="0OBSERVED">South India</span>
+                <span class="category category-photo" data--h-bstatus="0OBSERVED">Photo</span>
+                <div class="category-more-wrapper" data--h-bstatus="0OBSERVED">
+                  <div class="category-more" data--h-bstatus="0OBSERVED">
+                    <i class="fa-solid fa-ellipsis" data--h-bstatus="0OBSERVED"></i>
+                  </div>
+                  <div class="categories-dropdown" data--h-bstatus="0OBSERVED">
+                    <span class="category category-world" data--h-bstatus="0OBSERVED">World</span>
+                    <span class="category category-sports" data--h-bstatus="0OBSERVED">Sports</span>
+                    <span class="category category-opinion" data--h-bstatus="0OBSERVED">Opinion</span>
+                    <span class="category category-education" data--h-bstatus="0OBSERVED">Education</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <nav aria-label="Page navigation">
+            <ul class="custom-pagination">
+              <li><a href="#" class="page-link prev" aria-label="Previous"><i class="fa-solid fa-angle-left"></i></a>
+              </li>
+              <li><a href="#" class="page-link active">1</a></li>
+              <li><a href="#" class="page-link">2</a></li>
+              <li><span class="page-ellipsis">…</span></li>
+              <li><a href="#" class="page-link">10</a></li>
+              <li><a href="#" class="page-link next" aria-label="Next"><i class="fa-solid fa-angle-right"></i></a></li>
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close ms-auto m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="ratio ratio-16x9">
+          <iframe id="videoIframe" src="" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <!-- Logo & About -->
+      <div class="footer-col footer-about">
+        <a href="/" class="footer-logo" aria-label="Maktoobmedia Home">
+          <img src="assets/img/logo-white.svg" alt="Maktoobmedia logo" />
+        </a>
+        <p>
+          Get breaking news, in‑depth analysis, and exclusive reports from
+          India and around the world.
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Explore Links -->
+      <div class="footer-col footer-explore">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">India</a></li>
+          <li><a href="#">Gaza Genocide</a></li>
+          <li><a href="#">World</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Factcheck</a></li>
+          <li><a href="#">Opinion</a></li>
+          <li><a href="#">Photo</a></li>
+          <li><a href="#">Video</a></li>
+          <li><a href="#">Film & TV</a></li>
+          <li><a href="#">Bookshelf</a></li>
+          <li><a href="#">Support Maktoob</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col footer-links">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#">North India</a></li>
+          <li><a href="#">Kashmir</a></li>
+          <li><a href="#">Central India</a></li>
+          <li><a href="#">Western India</a></li>
+          <li><a href="#">East India</a></li>
+          <li><a href="#">North East India</a></li>
+          <li><a href="#">South India</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Gallery -->
+      <div class="footer-col footer-gallery">
+        <h4>Gallery</h4>
+        <div class="gallery-grid">
+          <a href="#"><img src="assets/img/articles/thumb1.jpg" alt="" /></a>
+          <a href="#"><img src="assets/img/articles/education-featured.jpg" alt="" /></a>
+          <a href="#"><img src="assets/img/articles/featured-small-top.png" alt="" /></a>
+          <a href="#"><img src="assets/img/articles/trend.png" alt="" /></a>
+          <a href="#"><img src="assets/img/articles/feature1.png" alt="" /></a>
+          <a href="#"><img src="assets/img/articles/world-featured.jpg" alt="" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2025 Maktoobmedia. Designed by Taktek Company. All rights
+        reserved.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
