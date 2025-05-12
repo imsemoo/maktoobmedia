@@ -1190,16 +1190,7 @@ ul {
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .world-section {
-    padding: 1.5rem 0;
-  }
 
-  .world-featured__meta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
 
 
 /* videos-section.css */
@@ -1707,10 +1698,7 @@ ul {
     width: 100%;
   }
 
-  .subscribe-form input[type="email"] {
-    border-radius: 4px;
-    margin-bottom: 1rem;
-  }
+
 
   .btn-subscribe {
     border-radius: 4px;
@@ -3621,4 +3609,133 @@ Product Card Styles
 .custom-pagination .next:hover {
   background: var(--pagination-hover);
   color: var(--pagination-color-inverse);
+}
+
+.education-featured h3 {
+  font-size: 1.8em;
+}
+
+@media (max-width: 768px) {
+  .world-section {
+    padding: 1.5rem 0;
+  }
+
+  .world-featured__meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-explore ul {
+    column-count: 1;
+  }
+
+  .world-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-thumb {
+    border-radius: 12px;
+    flex-flow: row-reverse;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .card-thumb img {
+    flex: 1;
+  }
+
+  .card-small {
+    flex-flow: column;
+  }
+
+  .card-small>img {
+    flex: unset;
+    width: 100%;
+    height: 220px;
+  }
+
+  .opinion-card .card-thumb img {
+    height: 220px;
+    flex: unset;
+
+  }
+
+  .subscribe-form {
+    flex: unset;
+
+  }
+
+  .btn-subscribe {
+    flex: .2;
+  }
+
+  .footer-col h4 {
+    width: max-content;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .footer-about p {
+    max-width: 100%;
+  }
+
+  .horizontal-news-card {
+    flex-flow: column;
+  }
+
+  .meta-row {
+    align-items: start;
+    flex-flow: column-reverse;
+  }
+
+  .horizontal-news-card .img-article {
+    flex: unset;
+    height: 220px;
+
+    width: 100%;
+  }
+
+  .small .horizontal-news-card .img-article {
+    flex: unset;
+    height: 220px;
+    border-radius: 12px;
+  }
+
+  .item-title,
+  .small .horizontal-news-card .title-article {
+    font-size: 1.2rem;
+  }
+
+  .main-articles .col-md-3 {
+    order: 1;
+  }
+
+  .main-articles .col-md-9 {
+    order: 2;
+
+  }
+
+  .author-header {
+    flex-flow: column;
+
+  }
+
+  .author-page {
+    padding: 4rem 1rem;
+  }
+
+  .author-avatar-wrapper::before,
+  .author-avatar {
+    width: 100%;
+  }
+
+  .author-details .d-flex {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .author-details h1 {
+    font-size: 1.6rem;
+  }
 }

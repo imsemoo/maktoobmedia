@@ -82,7 +82,13 @@
   <section class="search-section py-5">
     <div class="container">
       <!-- Search Filter Bar -->
-      <div class="search-filter  d-flex align-items-center gap-3 flex-wrap mb-5">
+      <div class="search-filter d-flex align-items-center gap-3 flex-wrap mb-5">
+        <!-- Search by Name -->
+        <div class="input-icon">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" class="form-control" placeholder="Search by name">
+        </div>
+
         <div class="input-icon">
           <i class="fa-solid fa-calendar-days"></i>
           <input type="date" class="form-control" placeholder="Date from">
@@ -108,8 +114,11 @@
             <option>Videos</option>
           </select>
         </div>
+
+
         <button class="btn btn-primary"><i class="fa-solid fa-search"></i> Search</button>
       </div>
+
 
 
       <!-- Search Results -->
